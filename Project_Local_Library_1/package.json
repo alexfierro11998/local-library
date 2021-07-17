@@ -1,0 +1,22 @@
+{
+  "name": "local-library",
+  "version": "1.0.0",
+  "description": "",
+  "main": "accounts.js",
+  "scripts": {
+    "accounts": "node accounts.js",
+    "books": "node books.js",
+    "home": "node home.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/carlosfierro207/local-library-project.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/carlosfierro207/local-library-project/issues"
+  },
+  "homepage": "https://github.com/carlosfierro207/local-library-project#readme"
+}
