@@ -22,23 +22,22 @@ function findAuthorById(authors, id) {
     return returnArray
   }
   
-  function getBorrowersForBook(book, accounts) {
-    const returnArray = accounts.reduce((accu, area, index) =>{
-      for(let a in book.borrows){
-        if(book.borrows[a].id === area.id){
-          area.returned = book.borrows[a].returned
-          accu.push(area)
-        }
-      }
-      return accu;
-    }, []);
-    if(returnArray.length > 10){
-      for(let i = 0; i < returnArray.length - 10; i++){
-        returnArray.pop()
-      }
-    }
-    return returnArray
+ function getBorrowersForBook(book, accounts) {
+  const allBorrowers = book.borrows.map((lend) => {
+    const account = findAccountById(accounts, lend.id);
+    return {
+      id: lend.id, 
+      returned: lend.returned, 
+      ...account
+    };
+  });
+
+  while(allBorrowers.length > 10) {
+    allBorrowers.pop();
   }
+
+  return allBorrowers;
+}
   
   module.exports = {
     findAuthorById,
