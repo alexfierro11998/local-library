@@ -12,6 +12,11 @@
     "type": "git",
     "url": "git+https://github.com/carlosfierro207/local-library-project.git"
   },
+  "devDependencies": {
+    "jest": "^26.4.2",
+    "nodemon": "^2.0.12",
+    "supertest": "5.0.0"
+  },
   "keywords": [],
   "author": "",
   "license": "ISC",
