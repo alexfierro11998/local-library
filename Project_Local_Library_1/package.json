@@ -18,5 +18,10 @@
   "bugs": {
     "url": "https://github.com/carlosfierro207/local-library-project/issues"
   },
+  "devDependencies": {
+    "jest": "^26.4.2",
+    "nodemon": "^2.0.12",
+    "supertest": "5.0.0"
+  },
   "homepage": "https://github.com/carlosfierro207/local-library-project#readme"
 }
